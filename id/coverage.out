@@ -1,0 +1,10 @@
+mode: set
+github.com/developersgotech/go-util/id/id.go:15.18,17.2 1 1
+github.com/developersgotech/go-util/id/id.go:20.26,22.16 2 1
+github.com/developersgotech/go-util/id/id.go:22.16,24.3 1 0
+github.com/developersgotech/go-util/id/id.go:25.2,25.27 1 1
+github.com/developersgotech/go-util/id/id.go:29.40,31.16 2 1
+github.com/developersgotech/go-util/id/id.go:31.16,33.3 1 0
+github.com/developersgotech/go-util/id/id.go:34.2,34.27 1 1
+github.com/developersgotech/go-util/id/id.go:38.28,40.2 1 1
+github.com/developersgotech/go-util/id/id.go:43.30,45.2 1 1
