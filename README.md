@@ -1,9 +1,4 @@
-# go-util
-
-[![GoDoc](https://godoc.org/github.com/developersgotech/go-util?status.svg)](https://godoc.org/github.com/developersgotech/go-util)
-[![Build Status](https://travis-ci.org/developersgotech/go-util.svg?branch=master)](https://travis-ci.org/developersgotech/go-util)
-[![Coverage Status](https://coveralls.io/repos/developersgotech/go-util/badge.svg?branch=master&service=github)](https://coveralls.io/github/developersgotech/go-util?branch=master)
-[![Go Report Card](https://goreportcard.com/badge/github.com/developersgotech/go-util)](https://goreportcard.com/report/github.com/developersgotech/go-util)
+# Go Util
 
 This is a collection of utility functions for Go.
 
@@ -13,10 +8,17 @@ This is a collection of utility functions for Go.
 go get github.com/developersgotech/go-util
 ```
 
-## Licencia
+## Packages
 
-Este proyecto se distribuye bajo la Licencia Apache 2.0. Ver el archivo [LICENSE](LICENSE) para obtener más detalles.
+The documentation and examples of the implementation of each of the packages are in each package.
 
-## Atribuciones
+- [Id](id/README.md)
+- [Password](password/README.md)
 
-Este software utiliza la biblioteca 'github.com/google/uuid', bajo la Licencia BSD de 3 cláusulas. Ver el archivo [NOTICE](NOTICE) para obtener más detalles.****
+## License
+
+Go Util is licensed under the BSD3 License. See [LICENSE](LICENSE) for more information.
+
+## Attributions
+
+This software uses third party libraries. See [NOTICE](NOTICE) file for details.
