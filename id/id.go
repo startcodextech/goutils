@@ -16,8 +16,8 @@ func NoopId() ID {
 	return ID{value: uuid.UUID{}}
 }
 
-// NewID returns a new ID.
-func NewID() (ID, error) {
+// New returns a new ID.
+func New() (ID, error) {
 	id, err := uuid.NewRandom()
 	if err != nil {
 		return NoopId(), err
@@ -26,7 +26,7 @@ func NewID() (ID, error) {
 }
 
 // ParseID returns an ID from a string.
-func ParseID(value string) (ID, error) {
+func Parse(value string) (ID, error) {
 	id, err := uuid.Parse(value)
 	if err != nil {
 		return NoopId(), err

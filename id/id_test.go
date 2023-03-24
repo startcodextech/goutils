@@ -3,14 +3,14 @@ package id
 import "testing"
 
 func TestNewID(t *testing.T) {
-	id, err := NewID()
+	id, err := New()
 	if err != nil {
 		t.Errorf("error creating new ID: %v", err)
 	}
 	if id.IsZero() {
 		t.Errorf("new ID should not be zero")
 	}
-	_, err = ParseID(NoopId().String())
+	_, err = Parse(NoopId().String())
 	if err != nil {
 		t.Errorf("error parsing noop ID: %v", err)
 	}
