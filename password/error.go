@@ -1,8 +1,8 @@
 package password
 
-import "errors"
+import goerror "github.com/developersgotech/go-erros"
 
-var (
+const (
 	// ErrPasswordNotMatch is returned when the hashed password does not match the plain-text password.
-	ErrPasswordNotMatch = errors.New("hashed password does not match plain-text password")
+	ErrPasswordNotMatch = goerror.Error("hashed password does not match plain-text password")
 )
