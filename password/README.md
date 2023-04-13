@@ -5,7 +5,7 @@ This package has as objective functions for the validation and generation of pas
 ## Import
 
 ```go
-import "github.com/developersgotech/go-util/password"
+import "github.com/start-codex/utils/password"
 ```
 
 ## Usage
