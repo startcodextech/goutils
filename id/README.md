@@ -5,7 +5,7 @@ This package has as objective functions for the validation and generation of uui
 ## Import
 
 ```go
-import "github.com/developersgotech/go-util/id"
+import "github.com/start-codex/utils/id"
 ```
 
 ## Usage
