@@ -9,3 +9,7 @@ func (e Email) IsValid() bool {
 	valido, err := regexp.MatchString(expresionRegular, string(e))
 	return valido && err == nil
 }
+
+func (e Email) String() string {
+	return string(e)
+}
