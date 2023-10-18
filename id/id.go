@@ -25,6 +25,12 @@ func New() (ID, error) {
 	return ID{value: id}, nil
 }
 
+// NewString returns a new ID as a string.
+func NewString() string {
+	id, _ := New()
+	return id.String()
+}
+
 // ParseID returns an ID from a string.
 func Parse(value string) (ID, error) {
 	id, err := uuid.Parse(value)
