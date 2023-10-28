@@ -5,7 +5,7 @@ This package has as objective functions for the validation and generation of uui
 ## Import
 
 ```go
-import "github.com/start-codex/utils/id"
+import "github.com/start-codex/goutils/id"
 ```
 
 ## Usage
@@ -27,5 +27,25 @@ isZero := id.IsZero()
 
 ### Get value to string
 ```go
-value := id.String()
+value := id.ID()
+```
+
+### Generate value to string
+```go
+value := id.NewString()
+```
+
+## Deprecation
+
+### String()
+The function `String()` is deprecated, use `ID()` instead.
+```go
+uuid, err := id.New()
+
+if err != nil {
+    panic(err)
+}
+	
+// uuid.String() replace with
+value := uuid.ID()
 ```

@@ -5,7 +5,7 @@ This is a collection of utility functions for Go.
 ## Installation
 
 ```bash
-go get github.com/start-codex/utils
+go get github.com/start-codex/goutils
 ```
 
 ## Packages
