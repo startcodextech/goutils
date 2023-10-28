@@ -5,6 +5,11 @@ import (
 )
 
 type (
+	// IDer is an interface that returns an ID.
+	IDer interface {
+		ID() string
+	}
+
 	// ID is a unique identifier.
 	ID struct {
 		value uuid.UUID
@@ -40,12 +45,17 @@ func Parse(value string) (ID, error) {
 	return ID{value: id}, nil
 }
 
+// ID returns the string representation of the ID.
+func (id ID) ID() string {
+	return id.value.String()
+}
+
 // IsZero returns true if the ID is nil.
 func (id ID) IsZero() bool {
 	return id.value.String() == ID_NIL_VALUE
 }
 
-// String returns the string representation of the ID.
+// Deprecated: use IDer.ID() instead.
 func (id ID) String() string {
 	return id.value.String()
 }
