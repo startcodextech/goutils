@@ -1,6 +1,6 @@
 package password
 
-import goerror "github.com/start-codex/goerrors"
+import goerror "github.com/startcodextech/goerrors"
 
 const (
 	// ErrPasswordNotMatch is returned when the hashed password does not match the plain-text password.
