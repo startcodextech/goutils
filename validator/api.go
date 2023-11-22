@@ -1,10 +1,13 @@
 package validator
 
-import "regexp"
+import (
+	"regexp"
+	"unicode"
+)
 
 const (
 	NameOrLastnameRegexp = `^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ' -]{2,50}$`
-	PasswordRegexp       = `^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@[\]^_!"#$%&'()*+,-./:;{}<>|=~?])[A-Za-z\d@[\]^_!"#$%&'()*+,-./:;{}<>|=~?]{8,}$`
+	PasswordRegexp       = `[@[\]^_!"#$%&'()*+,-./:;{}<>|=~?]`
 )
 
 func Regexp(value, regex string) bool {
@@ -30,6 +33,27 @@ func IsEmail(value string) bool {
 // * They must be a minimum of 8 characters.
 //
 // * Specific list of allowed special characters: @ [ ] ^ _ ! " # $ % & ' ( ) * + , - . / : ; { } < > = | ~ ?
-func IsValidPassword(value string) bool {
-	return Regexp(value, PasswordRegexp)
+func IsValidPassword(password string) bool {
+	if len(password) < 8 {
+		return false
+	}
+
+	var hasUpper, hasLower, hasNumber, hasSpecial bool
+
+	var specialCharRegex = regexp.MustCompile(PasswordRegexp)
+
+	for _, char := range password {
+		switch {
+		case unicode.IsUpper(char):
+			hasUpper = true
+		case unicode.IsLower(char):
+			hasLower = true
+		case unicode.IsDigit(char):
+			hasNumber = true
+		case specialCharRegex.MatchString(string(char)):
+			hasSpecial = true
+		}
+	}
+
+	return hasUpper && hasLower && hasNumber && hasSpecial
 }
