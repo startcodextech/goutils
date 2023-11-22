@@ -29,6 +29,12 @@ func HashPassword(password string, cost int) (Password, error) {
 	}, nil
 }
 
+func HashPasswordString(password string, cost int) string {
+	pass, _ := HashPassword(password, cost)
+
+	return pass.String()
+}
+
 // FromHash creates a Password from a hashed password and its corresponding plain-text password.
 // It returns an error if the hashed password does not match the plain-text password.
 func FromHash(hashedPassword string, password string) (Password, error) {
